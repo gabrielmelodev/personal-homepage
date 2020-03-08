@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+body {
+  background: #121317;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.repo-container {
+	background: #f5f5f5;
+	margin-top: 50px;
+	padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-centered {
+	align-self: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#repo-list {
+	max-width: 1000px;
+	list-style: none;
+	margin: 30px 0;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
 }
 
-.App-link {
-  color: #61dafb;
+.repo-list-item {
+	margin: 10px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 3px;
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.github_buttons {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* .github_buttons .github-button {} */
+
+.repo-list-item:hover {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.repo-list-item {
+	margin-top: 3px;
+	border-top: 7px solid #1b66a3;
+}
+
+.repo-list-item:nth-child(5n+1) {
+	margin-top: 3px;
+	border-top: 7px solid #39a86b;
+}
+
+.repo-list-item:nth-child(5n+2) {
+	margin-top: 3px;
+	border-top: 7px solid #a83939;
+}
+
+.repo-list-item:nth-child(5n+3) {
+	margin-top: 3px;
+	border-top: 7px solid #7c39a8;
+}
+
+.repo-list-item:nth-child(5n+4) {
+	margin-top: 3px;
+	border-top: 7px solid #d17946;
+}
+
+.repo-title-name {
+	text-decoration: none;
+	color: #1b66a3;
+	font-size: 20px;
+}
+
+.repo-title-name:hover {
+	text-decoration: underline;
+}
+
+.repo-description {
+	font-size: 15px;
+	margin: 10px 0;
+}
+
+.repo-description-readmore {
+	margin-left: 10px;
+	text-decoration: none;
+	color: #1b66a3;
+	font-size: 15px;
+}
+
+.repo-description-readmore:hover {
+	text-decoration: underline;
 }

@@ -1,44 +1,32 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-`;
-
-
-export  const  Title = styled.h1`
-   position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(0px 0px 99.9% 99.9%);
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    padding: 0px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-`;
-
-
-export const Wrraper = styled.div`
-
-    height: 100%;
+    position: relative;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
     align-items: center;
-    max-width: 1070px;
-    padding: 0px 30px;
-    margin: 0px auto;
-
-`;
-
-export const Header = styled.div`
-    width: 100%;
-    height: 70px;
-    color: rgb(255, 255, 255);
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    height: 56px;
     background: #12131A;
-    transition: all 0.2s ease 0s;
+    margin-bottom: 1rem!important;
 
+    @media (min-width: 768px) {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
 `;
